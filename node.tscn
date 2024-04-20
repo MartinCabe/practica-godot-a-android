@@ -1,0 +1,311 @@
+[gd_scene load_steps=37 format=3 uid="uid://cw743gja2qro2"]
+
+[ext_resource type="Script" path="res://Player.gd" id="1_lg5yj"]
+[ext_resource type="Texture2D" uid="uid://3pnd24h3w48q" path="res://art/Fantasy World Tiny NPCs/Char 1/walk.png" id="1_vtta3"]
+[ext_resource type="Script" path="res://node.gd" id="1_ylpci"]
+[ext_resource type="Script" path="res://mob.gd" id="2_i8cgm"]
+[ext_resource type="Texture2D" uid="uid://bxagj4rado2al" path="res://art/Fantasy World Tiny NPCs/Char 1/Idle.png" id="2_qu0c3"]
+[ext_resource type="Texture2D" uid="uid://b64y01yacvlbd" path="res://art/Crab Enemy Camacebra Games/Moving/CrabMoving1.png" id="3_neo0g"]
+[ext_resource type="Texture2D" uid="uid://0do2uklb84d8" path="res://art/Crab Enemy Camacebra Games/Moving/CrabMoving2.png" id="4_xdq06"]
+[ext_resource type="Texture2D" uid="uid://m5l6oao2flma" path="res://art/Crab Enemy Camacebra Games/Moving/CrabMoving3.png" id="5_x51f6"]
+[ext_resource type="Texture2D" uid="uid://cojin70y01re3" path="res://art/Crab Enemy Camacebra Games/Moving/CrabMoving4.png" id="6_g41p1"]
+[ext_resource type="PackedScene" uid="uid://xcxg7okfp8dv" path="res://hud.tscn" id="10_yqq4f"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_w6nhk"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_neo0g")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_xdq06")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_x51f6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_g41p1")
+}],
+"loop": true,
+"name": &"default-loop",
+"speed": 5.0
+}]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_dmcri"]
+
+[sub_resource type="PackedScene" id="PackedScene_7j8f5"]
+_bundled = {
+"conn_count": 1,
+"conns": PackedInt32Array(1073741828, 1073741827, 18, 17, 2, 0, 0),
+"editable_instances": [],
+"names": PackedStringArray("Mob", "RigidBody2D", "collision_mask", "gravity_scale", "script", "metadata/_edit_group_", "AnimatedSprite2D", "AnimatedSprite2D", "scale", "sprite_frames", "animation", "frame_progress", "CollisionShape2D", "CollisionShape2D", "shape", "VisibleOnScreenNotifier2D", "VisibleOnScreenNotifier2D", "_on_visible_on_screen_notifier_2d_screen_exited", "screen_exited"),
+"node_count": 4,
+"node_paths": [NodePath("."), NodePath("."), NodePath("."), NodePath("."), NodePath("VisibleOnScreenNotifier2D")],
+"nodes": PackedInt32Array(-1, -1, 1, 0, -1, 4, 2, 0, 3, 1, 4, 2, 5, 3, 0, 1073741824, 0, 7, 6, -1, 4, 8, 4, 9, 5, 10, 6, 11, 7, 0, 1073741825, 0, 13, 12, -1, 1, 14, 8, 0, 1073741826, 0, 16, 15, -1, 0, 0),
+"variants": [0, 0.0, ExtResource("2_i8cgm"), true, Vector2(2, 2), SubResource("SpriteFrames_w6nhk"), &"default-loop", 0.134927, SubResource("CapsuleShape2D_dmcri")],
+"version": 3
+}
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_42y50"]
+atlas = ExtResource("1_vtta3")
+region = Rect2(0, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_tbea8"]
+atlas = ExtResource("1_vtta3")
+region = Rect2(16, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1qaoy"]
+atlas = ExtResource("1_vtta3")
+region = Rect2(32, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_lefai"]
+atlas = ExtResource("1_vtta3")
+region = Rect2(48, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_080y5"]
+atlas = ExtResource("2_qu0c3")
+region = Rect2(0, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_yf6jw"]
+atlas = ExtResource("2_qu0c3")
+region = Rect2(16, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8qvdj"]
+atlas = ExtResource("2_qu0c3")
+region = Rect2(32, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_83wm0"]
+atlas = ExtResource("2_qu0c3")
+region = Rect2(48, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_nmknp"]
+atlas = ExtResource("1_vtta3")
+region = Rect2(0, 16, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xul0q"]
+atlas = ExtResource("1_vtta3")
+region = Rect2(16, 16, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1105i"]
+atlas = ExtResource("1_vtta3")
+region = Rect2(32, 16, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_p01k0"]
+atlas = ExtResource("1_vtta3")
+region = Rect2(48, 16, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jes2f"]
+atlas = ExtResource("1_vtta3")
+region = Rect2(0, 48, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_amqkv"]
+atlas = ExtResource("1_vtta3")
+region = Rect2(16, 48, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_eih7n"]
+atlas = ExtResource("1_vtta3")
+region = Rect2(32, 48, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_g68qb"]
+atlas = ExtResource("1_vtta3")
+region = Rect2(48, 48, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_i33ci"]
+atlas = ExtResource("1_vtta3")
+region = Rect2(0, 32, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5bh82"]
+atlas = ExtResource("1_vtta3")
+region = Rect2(16, 32, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_010ma"]
+atlas = ExtResource("1_vtta3")
+region = Rect2(32, 32, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_mdey7"]
+atlas = ExtResource("1_vtta3")
+region = Rect2(48, 32, 16, 16)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_fb4l5"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_42y50")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_tbea8")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1qaoy")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_lefai")
+}],
+"loop": true,
+"name": &"down-loop",
+"speed": 8.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_080y5")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_yf6jw")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_8qvdj")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_83wm0")
+}],
+"loop": true,
+"name": &"idle-loop",
+"speed": 8.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_nmknp")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xul0q")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1105i")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_p01k0")
+}],
+"loop": true,
+"name": &"left-loop",
+"speed": 8.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_jes2f")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_amqkv")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_eih7n")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_g68qb")
+}],
+"loop": true,
+"name": &"right-loop",
+"speed": 8.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_i33ci")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5bh82")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_010ma")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_mdey7")
+}],
+"loop": true,
+"name": &"up-loop",
+"speed": 8.0
+}]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_vnudw"]
+radius = 21.0
+height = 50.0
+
+[sub_resource type="Curve2D" id="Curve2D_whs8r"]
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 480, 0, 0, 0, 0, 0, 480, 720, 0, 0, 0, 0, 0, 720, 0, 0, 0, 0, 0, 0)
+}
+point_count = 5
+
+[node name="Main" type="Node"]
+script = ExtResource("1_ylpci")
+mob_scene = SubResource("PackedScene_7j8f5")
+
+[node name="Player" type="Area2D" parent="."]
+position = Vector2(240, 450)
+script = ExtResource("1_lg5yj")
+metadata/_edit_group_ = true
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Player"]
+scale = Vector2(4, 4)
+sprite_frames = SubResource("SpriteFrames_fb4l5")
+animation = &"down-loop"
+frame_progress = 0.981438
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Player"]
+shape = SubResource("CapsuleShape2D_vnudw")
+
+[node name="UI" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="UpButton" type="Button" parent="UI"]
+layout_mode = 0
+offset_left = 212.0
+offset_top = 602.0
+offset_right = 267.0
+offset_bottom = 657.0
+
+[node name="LeftButton" type="Button" parent="UI"]
+layout_mode = 0
+offset_left = 153.0
+offset_top = 662.0
+offset_right = 208.0
+offset_bottom = 717.0
+
+[node name="RightButton" type="Button" parent="UI"]
+layout_mode = 0
+offset_left = 271.0
+offset_top = 661.0
+offset_right = 326.0
+offset_bottom = 716.0
+
+[node name="DownButton" type="Button" parent="UI"]
+layout_mode = 0
+offset_left = 212.0
+offset_top = 661.0
+offset_right = 267.0
+offset_bottom = 716.0
+
+[node name="MobTimer" type="Timer" parent="."]
+wait_time = 0.5
+
+[node name="ScoreTimer" type="Timer" parent="."]
+
+[node name="StartTimer" type="Timer" parent="."]
+wait_time = 2.0
+one_shot = true
+
+[node name="StartPosition" type="Marker2D" parent="."]
+position = Vector2(240, 450)
+
+[node name="MobPath" type="Path2D" parent="."]
+curve = SubResource("Curve2D_whs8r")
+
+[node name="MobSpawnLocation" type="PathFollow2D" parent="MobPath"]
+
+[node name="HUD" parent="." instance=ExtResource("10_yqq4f")]
+
+[connection signal="body_entered" from="Player" to="Player" method="_on_body_entered"]
+[connection signal="hit" from="Player" to="." method="game_over"]
+[connection signal="button_down" from="UI/UpButton" to="Player" method="_on_up_button_button_down"]
+[connection signal="button_up" from="UI/UpButton" to="Player" method="_on_up_button_button_up"]
+[connection signal="button_down" from="UI/LeftButton" to="Player" method="_on_left_button_button_down"]
+[connection signal="button_up" from="UI/LeftButton" to="Player" method="_on_left_button_button_up"]
+[connection signal="button_down" from="UI/RightButton" to="Player" method="_on_right_button_button_down"]
+[connection signal="button_up" from="UI/RightButton" to="Player" method="_on_right_button_button_up"]
+[connection signal="button_down" from="UI/DownButton" to="Player" method="_on_down_button_button_down"]
+[connection signal="button_up" from="UI/DownButton" to="Player" method="_on_down_button_button_up"]
+[connection signal="timeout" from="MobTimer" to="." method="_on_mob_timer_timeout"]
+[connection signal="timeout" from="ScoreTimer" to="." method="_on_score_timer_timeout"]
+[connection signal="timeout" from="StartTimer" to="." method="_on_start_timer_timeout"]
+[connection signal="start_game" from="HUD" to="." method="new_game"]

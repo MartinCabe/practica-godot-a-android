@@ -1,0 +1,48 @@
+[gd_scene load_steps=8 format=3 uid="uid://dhx8nlie3kp0r"]
+
+[ext_resource type="Script" path="res://mob.gd" id="1_os4of"]
+[ext_resource type="Texture2D" uid="uid://b64y01yacvlbd" path="res://art/Crab Enemy Camacebra Games/Moving/CrabMoving1.png" id="1_ru20x"]
+[ext_resource type="Texture2D" uid="uid://0do2uklb84d8" path="res://art/Crab Enemy Camacebra Games/Moving/CrabMoving2.png" id="2_4pt11"]
+[ext_resource type="Texture2D" uid="uid://m5l6oao2flma" path="res://art/Crab Enemy Camacebra Games/Moving/CrabMoving3.png" id="3_accv8"]
+[ext_resource type="Texture2D" uid="uid://cojin70y01re3" path="res://art/Crab Enemy Camacebra Games/Moving/CrabMoving4.png" id="4_v0omn"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_w6nhk"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_ru20x")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_4pt11")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_accv8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_v0omn")
+}],
+"loop": true,
+"name": &"default-loop",
+"speed": 5.0
+}]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_dmcri"]
+
+[node name="Mob" type="RigidBody2D" groups=["mobs"]]
+collision_mask = 0
+gravity_scale = 0.0
+script = ExtResource("1_os4of")
+metadata/_edit_group_ = true
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+scale = Vector2(2, 2)
+sprite_frames = SubResource("SpriteFrames_w6nhk")
+animation = &"default-loop"
+frame_progress = 0.134927
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CapsuleShape2D_dmcri")
+
+[node name="VisibleOnScreenNotifier2D" type="VisibleOnScreenNotifier2D" parent="."]
+
+[connection signal="screen_exited" from="VisibleOnScreenNotifier2D" to="." method="_on_visible_on_screen_notifier_2d_screen_exited"]
